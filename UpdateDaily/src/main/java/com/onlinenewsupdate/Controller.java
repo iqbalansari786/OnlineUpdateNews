@@ -20,12 +20,17 @@ public class Controller {
 	    CoronaVirusDataService coronaVirusDataService=new CoronaVirusDataService();
 	
 	@RequestMapping(value= {"/","/home"})
-	public ModelAndView home(Model theModel)
+	public ModelAndView home(Model theModel,HttpServletRequest request)throws NullPointerException
 	{
+		
+	
+	
 		System.out.println("home controller called");
 		theModel.addAttribute("title", "DashBoard");
 		
 		theModel.addAttribute("userClickedlogin",false);
+	
+		
 		
 		return new ModelAndView("index");
 	}
@@ -57,7 +62,7 @@ public class Controller {
 	    @PostMapping("/login")
 	    public String login(HttpServletRequest request,Model model) {
 	    	
-	    	model.addAttribute("title","crona latest news");
+	    	model.addAttribute("title","DashBoard");
 	    	
 	    	
 	    	
@@ -80,6 +85,27 @@ public class Controller {
 	        return "index";
 	       
 	    }
+	    @PostMapping("/loginwithgoogle")
+	    public String loginwithgoogle(HttpServletRequest request,Model model) {
+	    	
+	    	model.addAttribute("title","DashBoard");
+	    	
+	    	
+	    	
+	    	String email=request.getParameter("emailId");
+	   
+	    	
+	   
+	    	
+	    		model.addAttribute("userClickedlogin",true);
+	    		System.out.println("user enter"+email);
+	    		
+	    	
+	     
+	        return "index";
+	       
+	    }
+	    
 
 
 }
