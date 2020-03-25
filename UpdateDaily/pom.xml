@@ -8,6 +8,12 @@
   <name>UpdateDaily Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
+  	 <repositories>
+        <repository>
+            <id>java-net-repo</id>
+            <url>https://maven.java.net/content/repositories/public/</url>
+        </repository>     
+  </repositories>
   
   
   
@@ -62,7 +68,18 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-csv</artifactId>
+			<version>1.8</version>
+		</dependency>
 
+
+
+
+	
 		<!-- JSTL -->
 
 		<dependency>
