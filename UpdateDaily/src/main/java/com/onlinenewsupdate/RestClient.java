@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.web.client.RestTemplate;
 
-import com.onlinenewsupdate.model.LocationStats;
+
 
 public class RestClient {
 	public static void main(String args[]) throws IOException, ClassNotFoundException, SQLException

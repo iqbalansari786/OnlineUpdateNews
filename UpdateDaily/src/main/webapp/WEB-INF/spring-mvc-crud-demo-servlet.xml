@@ -69,7 +69,10 @@
 	<!--to load static resources  -->
 	
 	<mvc:resources location="/assests/" mapping="/resources/**"></mvc:resources>
-
+<bean class = "org.springframework.context.support.ResourceBundleMessageSource"
+      id = "messageSource">
+      <property name = "basename" value = "messages" />
+   </bean>
 
 
 

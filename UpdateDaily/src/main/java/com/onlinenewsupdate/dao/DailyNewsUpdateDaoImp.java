@@ -22,7 +22,7 @@ public class DailyNewsUpdateDaoImp implements DailyNewsUpdateDao {
 	public boolean getLogin(String email, String password) {
 		String hashPassword="";
 		
-		System.out.println("in dao "+email+""+password);
+		System.out.println("in dao "+email);
 		Query query=sessionFactory.getCurrentSession().createQuery("from LoginModal where email =:email");
 		
 		
@@ -31,6 +31,11 @@ public class DailyNewsUpdateDaoImp implements DailyNewsUpdateDao {
 		Object singleResult = query.getSingleResult();
 		
 		List<LoginModal> resultList = ((org.hibernate.query.Query) query).list();
+		
+		if(resultList.isEmpty())
+		{
+			return false;
+		}
 		
 		for(LoginModal l:resultList)
 		{

@@ -1,7 +1,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
    <meta name="google-signin-client_id" content="270945131451-o13jnolql6t7th6a107a0ho7lihn5kvb.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <style>
+  .error{
+  color:red;}
+  
+  </style>
 
  <nav class="navbar navbar-toggleable-sm  fixed-top navbar-dark bg-primary">
     
@@ -102,14 +107,17 @@
 					</div> 
 
       
-        <form action="${pageContext.request.contextPath}/login" method="post">
+        <form:form action="${pageContext.request.contextPath}/login"  method="post" modelAttribute="userattribute">
+        <%--  <form:errors path = "*" cssClass = "errorblock" element = "div" /> --%>
   <div class="form-group">
     <label for="email">Email address:</label>
-    <input type="email" class="form-control" placeholder="Enter email" id="email" name="email">
+    <form:input type="email" class="form-control" placeholder="Enter email" id="email" path="email"/>
+    <form:errors path="email" cssClass="error" />
   </div>
   <div class="form-group">
     <label for="pwd">Password:</label>
-    <input type="password" class="form-control" placeholder="Enter password" id="pwd" name="password">
+    <form:password class="form-control" placeholder="Enter password" id="pwd" path="password"/>
+      <form:errors path="email" cssClass="error" />
   </div>
   <div class="form-group form-check">
     <label class="form-check-label">
@@ -118,7 +126,7 @@
   </div>
   <button type="submit" class="btn btn-primary">SignIn</button>
     <button type="button" class="btn btn-primary float-right">ForgetPassword ?</button>
-</form>
+</form:form>
         
 
       </div>
