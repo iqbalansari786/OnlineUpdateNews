@@ -79,7 +79,7 @@
     </nav>
  
     
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top: 44px">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -96,9 +96,9 @@
         
         		
         		  <div class="centeredText" style="margin-left: 30%">
-        		  <h4 style="margin-left:18%">OR</h4>
+        		  <h4 style="margin-left:22%">OR</h4>
         		  
-					<h5>Login with Your userid ..</h5>
+					<h5>Login with Your Email ..</h5>
 					</div> 
 
       
@@ -116,7 +116,8 @@
       <input class="form-check-input" type="checkbox"> Remember me
     </label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">SignIn</button>
+    <button type="button" class="btn btn-primary float-right">ForgetPassword ?</button>
 </form>
         
 

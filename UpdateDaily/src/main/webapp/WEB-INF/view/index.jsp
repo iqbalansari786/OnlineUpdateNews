@@ -29,65 +29,7 @@
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     
-    <style>
-    
-    a{
-    
-    font-size: 15px;
-    font-style:sans-serif;
-    color:black;
-    
-    
-    }
-     
 
- .myimages {
-     display: flex;
-     overflow: hidden;
-     height: 50vw;
-     background: #333
- }
-
- .myimages img {
-     max-width: 100%;
-     vertical-align: middle;
-     border: 2px solid white;
-     box-sizing: border-box;
-     transition: opacity .2s
- }
-
- .myimages:hover img {
-     opacity: 0.5
- }
-    
-    
-     .myimages img:hover {
-     opacity: 1
- }
-
- .first-column {
-     animation: var(--animation, none) 16s infinite linear
- }
-
- .first-column:hover {
-     animation-play-state: paused
- }
-
- .first-column:nth-of-type(odd) {
-     align-self: flex-end;
-     --direction: 50%
- }
-
- @keyframes slide {
-     to {
-         -webkit-transform: translateY(var(--direction, -50%));
-         transform: translateY(var(--direction, -50%))
-     }
- }
-   
-    
-    </style>
-    
     
     
    
@@ -101,8 +43,17 @@
     
     
     <!-- body content -->
-    
-    <div class="container-fluid fixed" style="margin-top:72px;border:solid red;overflow-y:scroll;height: 1000px">
+  
+<%-- <div>
+<nav class="container " aria-label="breadcrumb" style="position:fixed">
+  <ol class="breadcrumb navbar-dark bg-primary">
+    <li class="breadcrumb-item"><a href="#">${userClicked}</a></li>
+ 
+  </ol>
+</nav>
+
+</div> --%>
+    <div class="container-fluid fixed" style="margin-top: 72px;border:solid red;overflow-y:scroll;height: 1000px">
     <c:if test="${userClickedCrona == true}">
     <jsp:include page="/sharedPage/CronaVirus.jsp"></jsp:include>
     
@@ -111,7 +62,13 @@
     
     
        <c:if  test="${not empty userClickedloginmsg}">
-  			<h1>${userClickedloginmsg}</h1>
+  			
+  			<div class="alert alert-warning alert-dismissible fade show" role="alert" style="position: relative">
+  <strong>${userClickedloginmsg}!</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
     
     </c:if>
     		
@@ -134,22 +91,7 @@
 		
 		<!-- DataTable Bootstrap Script -->
 		<script src="${js}/dataTables.bootstrap.js"></script>
-		<script>
-
 	
-		$(document).ready(function(){
-
-			alert("its workig")
-
-			[...document.querySelectorAll('.first-column')].map(column => {
-			column.style.setProperty('--animation', 'slide');
-			column.style.setProperty('height', '200%');
-			column.innerHTML = column.innerHTML + column.innerHTML;
-			});
-
-			});
-
-		</script>
 		
 		
 		
