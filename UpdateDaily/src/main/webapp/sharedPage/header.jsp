@@ -1,6 +1,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+
+
    <meta name="google-signin-client_id" content="270945131451-o13jnolql6t7th6a107a0ho7lihn5kvb.apps.googleusercontent.com">
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <style>
   .error{
@@ -13,8 +16,7 @@
     	
     	
     	  <button type = "button" class = "navbar-toggler ml-auto" data-toggle = "collapse" data-target = "#mainNavbar" aria-controls = "navbarNav" aria-expanded = "false" aria-label = "Toggle navigation ">
-           <span class="navbar-toggler-icon">
-        </span>
+        <span> <ion-icon name="list-outline"></ion-icon></span>
      </button>
     	
     	<div class="collapse navbar-collapse text-center" id="mainNavbar" >

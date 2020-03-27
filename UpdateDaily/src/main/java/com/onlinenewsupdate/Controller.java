@@ -89,5 +89,17 @@ public class Controller {
 		return "index";
 
 	}
+	
+	
+	@RequestMapping("/crona")
+	
+	public ModelAndView cronaCateogry(Model model)
+	{
+		
+		model.addAttribute("userattribute", new LoginModal());
+		model.addAttribute("userClickedCrona",true);
+		
+		return new ModelAndView("index");
+	}
 
 }
