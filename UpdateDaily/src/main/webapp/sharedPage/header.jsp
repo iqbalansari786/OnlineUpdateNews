@@ -127,10 +127,16 @@
     </label>
   </div>
   <button type="submit" class="btn btn-primary">SignIn</button>
-    <button type="button" class="btn btn-primary float-right">ForgetPassword ?</button>
+   
 </form:form>
         
 
+      </div>
+      
+       <div class="modal-footer">
+        <a href="#" style="color:black;">Not Registered ? create account</a>
+        <a href="#">Forget Passowrd ?</a>
+        
       </div>
   
     </div>

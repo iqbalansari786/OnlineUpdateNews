@@ -20,7 +20,9 @@
 		base-package="com.onlinenewsupdate">
 	</context:component-scan>
 	  
-  <mvc:annotation-driven/>
+  <mvc:annotation-driven>
+     
+</mvc:annotation-driven>
 
     <!-- Step 1: Define Database DataSource / connection pool -->
  <bean id="sessionFactory"
